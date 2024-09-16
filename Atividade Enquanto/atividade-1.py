@@ -1,37 +1,24 @@
-# Função para cadastrar um usuário com validação de login e senha
-def cadastrar_usuario(usuarios_cadastrados):
-    while True:
-        login = input("Digite o login desejado: ")
-        
-        # Verifica se o login já foi usado por outro usuário
-        if login in usuarios_cadastrados:
-            print("Esse login já está sendo usado. Escolha outro.")
-            continue
-        
-        while True:
-            senha = input("Digite a senha desejada: ")
-            
-            # Verifica se o login e a senha são iguais
-            if login == senha:
-                print("Login e senha não podem ser iguais. Tente novamente.")
-            else:
-                break  # Senha válida, sair do loop de senha
-        
-        # Adiciona o login e senha válidos ao dicionário de usuários cadastrados
-        usuarios_cadastrados[login] = senha
-        print("Usuário cadastrado com sucesso!\n")
-        break  # Login e senha válidos, sair do loop de login
+print("Cadastro do Primeiro usuário")
 
-# Dicionário para armazenar os usuários cadastrados
-usuarios_cadastrados = {}
+while True:
+    loginUser_1 = input("login: ")
+    senhaUser_1 = input("senha: ")
+    if loginUser_1!= senhaUser_1:
+        break
+    print("O login e a senha não podem ser os mesmos. Tente novamente.")
 
-# Cadastro do primeiro usuário
-print("Cadastro do primeiro usuário:")
-cadastrar_usuario(usuarios_cadastrados)
+print("Cadastro do Segundo usuario")
 
-# Cadastro do segundo usuário
-print("Cadastro do segundo usuário:")
-cadastrar_usuario(usuarios_cadastrados)
 
-# Exibindo os usuários cadastrados (opcional)
-print("Usuários cadastrados:", usuarios_cadastrados)
+while True:
+    loginUser_2 = input("login: ")
+    senhaUser_2 = input("senha: ")
+    if loginUser_2!= senhaUser_2 and loginUser_2 != loginUser_1:
+        break
+    if loginUser_2 == senhaUser_2:
+        print("O login e a senha não podem ser os mesmos. Tente novamente.")
+    else:
+        print("Os logins dos usuários não podem ser iguais. ente novamente.")
+
+print("Cadastros bem sucedidos!")
+    
