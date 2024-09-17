@@ -1,24 +1,18 @@
 print("Cadastro do Primeiro usuário")
-
 while True:
-    loginUser_1 = input("login: ")
-    senhaUser_1 = input("senha: ")
-    if loginUser_1!= senhaUser_1:
+    loginU1 = input("login: ")
+    senhaU1 = input("senha: ")
+    if loginU1!= senhaU1:
         break
     print("O login e a senha não podem ser os mesmos. Tente novamente.")
-
 print("Cadastro do Segundo usuario")
-
-
 while True:
-    loginUser_2 = input("login: ")
-    senhaUser_2 = input("senha: ")
-    if loginUser_2!= senhaUser_2 and loginUser_2 != loginUser_1:
+    loginU2 = input("login: ")
+    senhaU2 = input("senha: ")
+    if loginU2!= senhaU2 and loginU2 != loginU1:
         break
-    if loginUser_2 == senhaUser_2:
+    if loginU2 == senhaU2:
         print("O login e a senha não podem ser os mesmos. Tente novamente.")
     else:
         print("Os logins dos usuários não podem ser iguais. ente novamente.")
-
 print("Cadastros bem sucedidos!")
-    
